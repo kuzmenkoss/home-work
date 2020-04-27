@@ -1,4 +1,4 @@
-package oreilly.battleSea;
+package oreilly.battleSeaSecond;
 
 import java.util.Scanner;
 
