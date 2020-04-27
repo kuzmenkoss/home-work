@@ -19,6 +19,9 @@ public class SimpleDotCom {
     public String checkYourself(String stringGuess) {
         int guess = Integer.parseInt(stringGuess);
         String result = "МИМО";
+        if (guess < 1) {
+            result = "НЕПРАВИЛЬНІЙ ХОД";
+        }
         for (int cell : locationCells) {
             if (guess == cell) {
                 result = "ПОПАЛ";
@@ -26,12 +29,22 @@ public class SimpleDotCom {
                 break;
             }
         }
+
         if (numOfHits == locationCells.length) {
-            result = "ПОТОПИЛ";
+            if (guess < 1) {
+                result = "НЕПРАВИЛЬНІЙ ХОД";
+            } else {
+                result = "ПОТОПИЛ";
+            }
         }
         System.out.println(result);
         return result;
 
     }
 
+    public checkForRepeat (int[] guess) {
+
+    }
+
 }
+
