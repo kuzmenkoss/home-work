@@ -5,6 +5,9 @@ import java.util.Arrays;
 public class SimpleDotCom {
     int[] locationCells;
     int numOfHits = 0;
+    int[] guessHistory = new int[8];
+    int numOfGuesses = 0; //
+    boolean isAlive = true;
     // int[] area = {2, 3, 4};
 
 //    public static void main(String[] args) {
@@ -20,10 +23,10 @@ public class SimpleDotCom {
 
     public String checkYourself(String stringGuess) {
         int guess = Integer.parseInt(stringGuess);
-        int[] guessHits = new int[8];
+       //метод булеан тру фолсе                 isValidHit
         String result = "МИМО";
         int i = 0;
-        do {
+
 //        ArrayList <String > guessHits = new ArrayList<>();
 //        guessHits.add(stringGuess);
 //           for (int i = 0; i < guessHits.length; i++) {
@@ -35,8 +38,8 @@ public class SimpleDotCom {
 //                break;
 //            }
 //        }
+        guessHistory  [i] = i + 1;
 
-            guessHits[i] = i + 1;
             if (guess < 1) {
                 result = "НЕПРАВИЛЬНыЙ ХОД";
                 System.out.println(result);
@@ -53,12 +56,12 @@ public class SimpleDotCom {
                 if (numOfHits == locationCells.length) {
                     result = "ПОТОПИЛ";
                 }
-                if (guessHits.length > 8) {
+                if (guessHistory.length > 8) {
                     result = "ПРЕВЫШЕНО КОЛИЧЕСТВО ХОДОВ";
                 }
             }
 
-        } while (i < guessHits.length);
+
         System.out.println(result);
         return result;
 
