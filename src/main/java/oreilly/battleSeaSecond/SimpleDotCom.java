@@ -4,13 +4,6 @@ public class SimpleDotCom {
     int[] locationCells;
     int numOfHits = 0;
 
-
-    public static void main(String[] args) {
-        SimpleDotCom dot = new SimpleDotCom(); // создать экземпляр класса
-        int[] locations = {2, 3, 4};
-        dot.setLocationCells(locations);
-    }
-
     public void setLocationCells(int[] locs) { //это не понятно зачем
         this.locationCells = locs;
     }
