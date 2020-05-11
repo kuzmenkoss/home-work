@@ -15,7 +15,6 @@ public class SimpleDotComTestDrive {
         test("8", "2", "УЖЕ ХОДИЛ СЮДА");
         test("9", "2", "ПРЕВЫШЕНО КОЛИЧЕСТВО ХОДОВ");
 
-
     }
 
     public static void test(String nameOfTest, String userGuess, String expectedResult) {
